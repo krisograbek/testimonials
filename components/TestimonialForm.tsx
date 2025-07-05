@@ -67,7 +67,7 @@ export default function TestimonialForm({ language }: TestimonialFormProps) {
   const generateDraft = async () => {
     setIsGenerating(true)
     try {
-      const prompt = `Write a short, specific testimonial for Kris based on the answers below. The tone should be honest, clear, and conversational. Emphasize transformation, Kris's teaching style, and the results the person achieved. Language: ${language.toUpperCase()}
+      const prompt = `Write a short, specific testimonial for Kris based on the answers below. The tone should be honest, clear, and conversational. Pick up the responder's language. Keep it as close to original as possible. Emphasize transformation, Kris's teaching style, and the results the person achieved. Use line breaks and write short paragraphs. Language: ${language.toUpperCase()}
 
 Name: ${watchedValues.name}
 Before: ${watchedValues.before}
