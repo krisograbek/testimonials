@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -29,6 +29,8 @@ interface FormData {
   }
 }
 
+
+
 export default function TestimonialForm() {
   const [language, setLanguage] = useState<Language>("en")
   const [isGenerating, setIsGenerating] = useState(false)
@@ -43,6 +45,7 @@ export default function TestimonialForm() {
     handleSubmit,
     watch,
     setValue,
+    control,
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
@@ -108,7 +111,7 @@ Who to recommend: ${watchedValues.whoRecommend}`
       }
 
       // Replace with your actual n8n webhook URL
-      const response = await fetch("https://your-n8n-webhook-url.com/webhook/testimonials", {
+      const response = await fetch("https://primary-production-4f54.up.railway.app/webhook/dce89585-155c-47f6-8f18-51b79697d0e1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -291,13 +294,25 @@ Who to recommend: ${watchedValues.whoRecommend}`
                 { key: "logo", label: t.form.permissionLogo },
                 { key: "publicUse", label: t.form.permissionPublic },
               ].map(({ key, label }) => (
-                <div key={key} className="flex items-center space-x-2">
-                  <Checkbox id={key} {...register(`permissions.${key as keyof FormData["permissions"]}`)} />
-                  <Label htmlFor={key} className="text-sm font-normal cursor-pointer">
-                    {label}
-                  </Label>
-                </div>
+                <Controller
+                  key={key}
+                  name={`permissions.${key}` as const}
+                  control={control}
+                  render={({ field }) => (
+                    <div className="flex items-center space-x-2">
+                      <Checkbox
+                        id={key}
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                      <Label htmlFor={key} className="text-sm font-normal cursor-pointer">
+                        {label}
+                      </Label>
+                    </div>
+                  )}
+                />
               ))}
+
             </CardContent>
           </Card>
 
