@@ -25,6 +25,8 @@ export const translations = {
       permissionPhoto: "You can use my photo",
       permissionLogo: "You can use my company logo",
       permissionPublic: "You can publicly share this testimonial on Kris's website or landing pages",
+      permissionsNote:
+        "I may share your story to show others what it’s like working with me — on my site, LinkedIn, or YouTube. Only what you’re comfortable with.",
       generateDraft: "Generate AI Draft",
       generating: "Generating...",
       preview: "Preview",
@@ -65,6 +67,8 @@ export const translations = {
       permissionPhoto: "Możesz użyć mojego zdjęcia",
       permissionLogo: "Możesz użyć logo mojej firmy",
       permissionPublic: "Możesz publicznie udostępnić tę rekomendację na stronie Krisa",
+      permissionsNote:
+        "Mogę podzielić się Twoją historią, by pokazać innym, jak wygląda współpraca ze mną — na mojej stronie, LinkedInie czy YouTube. Tylko w zakresie, w jakim czujesz się komfortowo.",
       generateDraft: "Wygeneruj Szkic AI",
       generating: "Generowanie...",
       preview: "Podgląd",

@@ -309,6 +309,8 @@ Who to recommend: ${watchedValues.whoRecommend}`
                 />
               ))}
 
+              <p className="text-sm text-gray-500 pt-2">{t.form.permissionsNote}</p>
+
             </CardContent>
           </Card>
 
