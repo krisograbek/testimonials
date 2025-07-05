@@ -2,7 +2,7 @@ export const translations = {
   en: {
     title: "Share Your Success Story",
     subtitle:
-      "Thanks for helping me grow! Your testimonial helps others trust the process. You can write your own or answer a few questions — I'll generate a short draft for you to tweak.",
+      "Thanks for helping me grow! Your testimonial helps others trust me. You can write your own or answer a few questions (AI will generate a short draft for you to tweak).",
     form: {
       name: "Your Name",
       namePlaceholder: "Enter your full name",
@@ -37,7 +37,7 @@ export const translations = {
   pl: {
     title: "Podziel się swoją historią sukcesu",
     subtitle:
-      "Dziękuję za pomoc w rozwoju! Twoja rekomendacja pomaga innym zaufać procesowi. Możesz napisać własną lub odpowiedzieć na kilka pytań — wygeneruję krótki szkic do edycji.",
+      "Dziękuję za pomoc w rozwoju! Twoja rekomendacja pomaga innym zaufać mnie. Możesz napisać samemu lub odpowiedzieć na kilka pytań (AI wygeneruje krótki szkic do edycji).",
     form: {
       name: "Twoje Imię i Nazwisko",
       namePlaceholder: "Wprowadź swoje pełne imię i nazwisko",
