@@ -11,13 +11,13 @@ export async function POST(request: NextRequest) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
-          {
-            role: "system",
-            content:
-              "You are a professional testimonial writer. Create authentic, specific testimonials that highlight transformation and results. Keep them concise but impactful.",
-          },
+          // {
+          //   role: "system",
+          //   content:
+          //     "You are a professional testimonial writer. Create authentic, specific testimonials that highlight transformation and results. Keep them concise but impactful. Just use data that you've got.",
+          // },
           {
             role: "user",
             content: prompt,
